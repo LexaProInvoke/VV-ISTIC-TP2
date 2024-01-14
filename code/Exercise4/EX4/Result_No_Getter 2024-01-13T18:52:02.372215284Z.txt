@@ -1,0 +1,3 @@
+Field: bigLuggageCount, Class: Booking, Package: com.entis.travelbot.entity.db
+Field: seats, Class: Booking, Package: com.entis.travelbot.entity.db
+Field: age, Class: Person, Package: Default Package

@@ -1,0 +1,23 @@
+Package,Class,Method,Parameters,Cyclomatic Complexity,Histogram
+com.entis.travelbot.entity.db,Booking,getId,[],1,█ 
+com.entis.travelbot.entity.db,Booking,setId,[UUID id],1,█ 
+com.entis.travelbot.entity.db,Booking,getPassenger,[],1,█ 
+com.entis.travelbot.entity.db,Booking,setPassenger,[Passenger passenger],1,█ 
+com.entis.travelbot.entity.db,Booking,getTrip,[],1,█ 
+com.entis.travelbot.entity.db,Booking,setTrip,[Trip trip],1,█ 
+com.entis.travelbot.entity.db,Booking,setSeats,[int seats],1,█ 
+com.entis.travelbot.entity.db,Booking,setBigLuggageCount,[int bigLuggageCount],1,█ 
+com.entis.travelbot.entity.db,Booking,getMediumLuggageCount,[],1,█ 
+com.entis.travelbot.entity.db,Booking,setMediumLuggageCount,[int mediumLuggageCount],1,█ 
+,Person,getName,[],1,█ 
+,Person,isAdult,[],1,█ 
+com.entis.travelbot.service.db.impl,PassengerServiceImpl,create,[SavePassengerRequest request],2,█ █ 
+com.entis.travelbot.service.db.impl,PassengerServiceImpl,findById,[String id],1,█ 
+com.entis.travelbot.service.db.impl,PassengerServiceImpl,findAll,[Pageable pageable],1,█ 
+com.entis.travelbot.service.db.impl,PassengerServiceImpl,update,[SavePassengerRequest request],6,█ █ █ █ █ █ 
+com.entis.travelbot.service.db.impl,PassengerServiceImpl,delete,[String id],2,█ █ 
+org.example,FieldGetterAnalyzer,main,[String[] args],2,█ █ 
+org.example,FieldGetterAnalyzer,analyzeFields,[String sourcePath; String outputFileName],3,█ █ █ 
+org.example,FieldGetterAnalyzer,generateReport,[List<String> report; String fileName],1,█ 
+org.example,FieldGetterVisitor,visit,[FieldDeclaration fieldDeclaration; List<String> report],2,█ █ 
+org.example,FieldGetterVisitor,hasPublicGetterMethod,[FieldDeclaration fieldDeclaration; String className],1,█ 

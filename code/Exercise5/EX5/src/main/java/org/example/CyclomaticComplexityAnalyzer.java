@@ -1,30 +1,3 @@
-# Code of your exercise
-
-Put here all the code created for this exercise
-
-
-## Cyclomatic Complexity with JavaParser
-
-To implement the cyclomatic sequence using java parser, we created a class  CyclomaticComplexityAnalyzer. This class analyzes the cyclomatic complexity of methods in source code files.
-The program extends the VoidVisitorAdapter class from the JavaParser library to visit and analyze the methods in the source code.
-
-Cyclomatic complexity is calculated for each method based on various control flow structures such as if, switch, for, while, and logical binary expressions.
-
-To demonstrate how the programme works, a report is generated in CSV format containing information about the package, class, method, parameters, cyclomatic complexity and a histogram showing the complexity.
-
-## To use the program:
- ### Openjdk 21 was used to run the project.
-
-- Open the Maven project "EX5" in IntelliJ IDEA.
-- In the run configurations, add the path to the files you want to check.
-- Run the programme
-
-After running the program, a CSV report file named ReportCC.csv will be generated, containing information about each method's cyclomatic complexity.
-
-An example of the generated file can be found in the answer folder. Also below is a picture of the answer "EX_5_Figure_1.png". It is better to open the generated file in tabular editors such as Google tables.
-
-## Programme code 
-```
 package org.example;
 
 import com.github.javaparser.ast.body.MethodDeclaration;
@@ -174,42 +147,3 @@ public class CyclomaticComplexityAnalyzer extends VoidVisitorAdapter<Void> {
         }
     }
 }
-```
-## Code of the pom file 
-```
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-
-    <groupId>org.example</groupId>
-    <artifactId>EX5</artifactId>
-    <version>1.0-SNAPSHOT</version>
-
-    <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>com.github.javaparser</groupId>
-            <artifactId>javaparser-symbol-solver-core</artifactId>
-            <version>3.25.8</version>
-        </dependency>
-    </dependencies>
-
-</project>
-```
-## Programme output
-![alt ex 5](EX_5_Figure_1.png)
-This screenshot shows the histogram of the 2 projets com.entis.travelbot.entity.db and the NoGetterTest.java example projets.
-
-The classes from the com.entis.travelbot.entity.db package mostly contain methods with low Cyclomatic Complexity (CC), which may indicate their simplicity and lack of complex branching.
-
-The PassengerServiceImpl class from the com.entis.travelbot.travelbot.service.db.impl package has an update method with a high Cyclomatic Complexity (CC) of 6, which may indicate that there are complex branches within the method.
-
-The classes from the org.example package contain methods with low and medium Cyclomatic Complexity (CC). For example, the analyseFields method from the FieldGetterAnalyzer class has CC = 3, which may indicate the presence of complex branches.
-
